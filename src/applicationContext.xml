@@ -9,4 +9,9 @@
 		<property name="user" value="${jdbc.user}"></property>
 		<property name="password" value="${jdbc.password}"></property>
 	</bean>
+	
+	<!-- 将UserDao放入到Spring容器中 -->
+	<bean name="userDao" class="edu.scnu.dao.UserDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
 </beans>
