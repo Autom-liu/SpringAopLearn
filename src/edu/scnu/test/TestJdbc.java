@@ -1,4 +1,4 @@
-锘縫ackage edu.scnu.test;
+package edu.scnu.test;
 
 import javax.annotation.Resource;
 
@@ -22,7 +22,7 @@ public class TestJdbc {
 	@Test
 	public void testSave() {
 		User u = new User();
-		u.setUser_name("娴嬭瘯鐢ㄦ埛");
+		u.setUser_name("测试用户");
 		u.setUser_state('0');
 		u.setAccount(1000d);
 		ud.save(u);
@@ -31,7 +31,7 @@ public class TestJdbc {
 	@Test
 	public void testUpdate() {
 		User u = new User();
-		u.setUser_name("娴嬭瘯鐢ㄦ埛2");
+		u.setUser_name("测试用户2");
 		ud.update(u);
 	}
 	
@@ -44,6 +44,11 @@ public class TestJdbc {
 	public void testFind() {
 		System.out.println(ud.getById(7));
 		System.out.println(ud.getAll());
+	}
+
+	@Test
+	public void testTransfer() {
+		us.transfer(3, 1, 100d);
 	}
 
 	public void setUd(UserDao ud) {
