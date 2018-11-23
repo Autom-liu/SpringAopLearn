@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void transfer(Integer from, Integer to, Double money) {
 		ud.decreaseAccount(from, money);
-	
+		int i = 1 / 0;
 		ud.increaseAccount(to, money);
 	}
 
