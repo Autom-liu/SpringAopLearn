@@ -25,7 +25,7 @@ public class TestJdbc {
 		u.setUser_name("≤‚ ‘”√ªß");
 		u.setUser_state('0');
 		u.setAccount(1000d);
-		ud.save(u);
+		us.save(u);
 	}
 	
 	@Test
@@ -42,8 +42,8 @@ public class TestJdbc {
 	
 	@Test
 	public void testFind() {
-		System.out.println(ud.getById(7));
-		System.out.println(ud.getAll());
+		System.out.println(us.find(2));
+		System.out.println(us.getAll());
 	}
 
 	@Test

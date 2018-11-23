@@ -38,8 +38,8 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 			@Override
 			public User mapRow(ResultSet rs, int index) throws SQLException {
 				User u = new User(rs.getInt("user_id"), rs.getString("user_code"),
-						rs.getString("user_name"), rs.getString("user_password"),
-						rs.getString("user_state").toCharArray()[0], rs.getDouble("account"));
+							rs.getString("user_name"), rs.getString("user_password"),
+							rs.getString("user_state").toCharArray()[0], rs.getDouble("account"));
 				return u;
 			}
 			
